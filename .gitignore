@@ -1,0 +1,73 @@
+# IDE / OS
+.DS_Store
+.idea/
+.vscode/
+.obsidian
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# Node / Frontend
+node_modules/
+/frontend/node_modules/
+/frontend/dist/
+/.pnpm-store/
+/frontend/.env
+/frontend/.env.local
+/frontend/.env.development.local
+/frontend/.env.test.local
+/frontend/.env.production.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python (Dialogue Control & LLM Agent)
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+var/
+Pipfile.lock
+poetry.lock
+.env
+/dialogue-control/.venv/
+/dialogue-control/.env
+/llm-agent/.venv/
+/llm-agent/.env
+.pytest_cache/
+.mypy_cache/
+
+# Java (Workflow Engine)
+target/
+/workflow-engine/target/
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+*.zip
+*.tar.gz
+*.rar
+/workflow-engine/.mvn/
+/workflow-engine/help.txt
+/workflow-engine/bin/
+/workflow-engine/out/
+/workflow-engine/*.log
+/workflow-engine/*.sqlite
+/workflow-engine/db/
+
+# Antigravity/Agent config
+/.agents/
+
+# Source code directories (ignored for public repo)
+/dialogue-control/
+/frontend/
+/llm-agent/
+/open-agent-layer/
+/workflow-engine/

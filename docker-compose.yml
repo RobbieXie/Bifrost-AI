@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  # Redis: 缓存会话历史以及 LangGraph 运行时图状态 Checkpoint
+  redis:
+    image: redis/redis-stack-server:latest
+    container_name: hybrid-ai-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    restart: always
+
+  # MySQL 8: 存储意图树配置、工作流 Canvas DAG 结构、全局 API/Slot 配置以及加密密钥
+  mysql:
+    image: mysql:8.0
+    container_name: hybrid-ai-mysql
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: hybrid_ai
+    volumes:
+      - mysql_data:/var/lib/mysql
+    restart: always
+
+volumes:
+  redis_data:
+  mysql_data:
